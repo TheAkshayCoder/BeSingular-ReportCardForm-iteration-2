@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-image:url('18.jpg') ;
+}
+
+.container{
+    margin-top:0
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    background: -webkit-linear-gradient(90deg, rgba(62,28,79,1) 29%, rgba(158,60,126,1) 100%);
+  -webkit-background-clip: text;
+    background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.multistep-container{
+    max-width:610px;
+    margin: 0 auto;
+}
+
+.multistep-container .active-button{
+    display: table;
+    margin: auto;
+    padding-left:0 ;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.multistep-container .active-button li{
+    display: inline-block;
+    width: 180px;
+
+}
+
+.multistep-container .active-button li .round-btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: block;
+    color: #000;
+    text-align: center;
+    font-family:'poppins';
+    font-weight: 500;
+    line-height:30px;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    z-index:1;
+}
+
+.multistep-container .active-button li.active .round-btn{
+    background: rgb(62,28,79);
+    background: linear-gradient(90deg, rgba(62,28,79,1) 29%, rgba(158,60,126,1) 100%);
+    color: #ffff;
+}
+
+.multistep-container .active-button li:not(:first-child) .round-btn::before{
+    position: absolute;
+    content: '';
+    width: 154px;
+    height: 3px;
+    background-color: #ccc;
+    left:-154px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.multistep-container .active-button li.active:not(:first-child) .round-btn::before{
+    background: rgb(62,28,79);
+    background: linear-gradient(90deg, rgba(62,28,79,1) 29%, rgba(158,60,126,1) 100%);;
+}
+
+.multistep-container .multistep-form-area{
+    background-color: white;
+    margin-top: 30px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    position: relative;
+    /* overflow: hidden; */
+    min-height: 520px;
+    border-radius: 1rem;
+    overflow: overlay;
+}
+
+
+.multistep-container .multistep-form-area .form-box{
+    position: absolute;
+    top: 25px;
+    left:25px;
+    right: 25px;
+    bottom: 25px;
+}
+
+.logo img{
+    width: 25%;
+    margin-top: 1rem;
+
+}
+
+.logo{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+
+}
+
+
+.multistep-container .multistep-form-area .form-box h4{
+    font-family: 'montserrat';
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.multistep-container .multistep-form-area .form-box label{
+    font-family:'montserrat';
+    font-weight:500;
+    font-size: 15px;
+}
+
+.multistep-container .multistep-form-area .form-box:nth-child(2),
+.multistep-container .multistep-form-area .form-box:nth-child(3){
+    display: none;
+}
+
+.multistep-container .multistep-form-area .form-box .button-row .next,
+.multistep-container .multistep-form-area .form-box .button-row .previous,
+.multistep-container .multistep-form-area .form-box .button-row .submit{
+    background: rgb(62,28,79);
+background: linear-gradient(90deg, rgba(62,28,79,1) 29%, rgba(158,60,126,1) 100%);
+    border:0;
+    box-shadow: none;
+    padding: 7px 30px;
+    margin-bottom: 1rem;
+    min-width: 100px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'montserrat';
+    font-weight: 500;
+}
+
+.multistep-container .multistep-form-area .form-box .button-row .next{
+    margin-left:0.5rem;
+}
+
+.multistep-container .multistep-form-area .form-box .button-row .previous{
+    margin-right:0.5rem;
+}
+
+
+
+.multistep-container .multistep-form-area .form-box .button-row{
+    display: table;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.multistep-container .multistep-form-area .form-box .button-row .submit{
+    background-color: green;
+    margin-left: 0.5rem;
+}
+
+form{
+    margin-bottom:1rem
+}
